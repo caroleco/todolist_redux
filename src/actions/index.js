@@ -27,3 +27,9 @@ export const updateTodo = todo => ({
     type: UPDATE_TODO,
     todo
 })
+
+export const DELETE_TODO = 'DELETE_TODO';
+export const deleteTodo = todo => ({
+    type: DELETE_TODO,
+    todo
+})

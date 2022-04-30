@@ -1,8 +1,9 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity, onLongPressTodo } from 'react-native'
+import { Button } from "react-native";
 
 
-const TodoListItem = ({ todo, onPressTodo, onLongPressTodo }) =>
+const TodoListItem = ({ todo, onPressTodo, onLongPressTodo, deleteTodo }) =>
     <TouchableOpacity onPress={onPressTodo}
     onLongPress={onLongPressTodo}>
         <View style={styles.line}>
@@ -11,6 +12,8 @@ const TodoListItem = ({ todo, onPressTodo, onLongPressTodo }) =>
                 todo.done ? styles.lineThrough : null]}>
                 {todo.text}
             </Text>
+            <Button title="x" onPress={deleteTodo}  />
+
         </View>
     </TouchableOpacity>
 
